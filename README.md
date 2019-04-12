@@ -1,4 +1,4 @@
-# sequelize-create-incorrect-value-repro
+# sequelize-create-bigint-precision-repro
 
 ## Environment
 
@@ -10,7 +10,7 @@
 
 ## The Problem
 
-When a model has a BIGINT column (haven't tested with other types), sometimes the inserted values are altered, not identical to the ones passed to the ORM. After creation, the ORM registers the values correctly, but the values in the database are different (usually the last few digits). Length is ok.
+When a model has a BIGINT column (haven't tested with other types), sometimes the inserted values are altered, not identical to the ones passed to the ORM (wrong percision). After creation, the ORM registers the values correctly, but the values in the database are different (usually the last few digits). Length is ok.
 
 **Note that this works correctly on older versions (I have used v4.43.0 in the past). After upgrading to v5.3.0, the issue has appeared.**
 
@@ -23,8 +23,8 @@ A MySQL user called "joe" identified by password "joe".
 **Clone the repo**
 
 ```sh
-git clone git@github.com:jozsefsallai/sequelize-create-incorrect-value-repro
-cd sequelize-create-incorrect-value-repro
+git clone git@github.com:jozsefsallai/sequelize-create-bigint-precision-repro
+cd sequelize-create-bigint-precision-repro
 ```
 
 **Install deps**

@@ -1,5 +1,5 @@
 {
-  "name": "sequelize-create-incorrect-value-repro",
+  "name": "sequelize-create-bigint-precision-repro",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
