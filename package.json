@@ -1,0 +1,23 @@
+{
+  "name": "sequelize-create-incorrect-value-repro",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "diff": "^4.0.1",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.3.5",
+    "umzug": "^2.2.0"
+  },
+  "scripts": {
+    "create:db": "node bin/createDatabase",
+    "migrate": "node bin/migrate",
+    "create:value": "node . --create",
+    "list:values": "node . --list",
+    "list:all-values": "node . --all",
+    "count": "node . --count"
+  }
+}
